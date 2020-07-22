@@ -1,7 +1,9 @@
 package com.hy.dyautoscroll.utils
 
 import android.app.Activity
+import android.content.Context
 import android.view.Gravity
+import com.hy.dyautoscroll.config.TAG_FLOAT_GLOBAL
 import com.lzf.easyfloat.EasyFloat
 import com.lzf.easyfloat.anim.AppFloatDefaultAnimator
 import com.lzf.easyfloat.anim.DefaultAnimator
@@ -12,7 +14,7 @@ import com.lzf.easyfloat.interfaces.OnInvokeView
 import com.lzf.easyfloat.utils.DisplayUtils
 
 
-public fun getNormalFloat(activity:Activity,layoutId: Int, invokeView: OnInvokeView? = null): EasyFloat.Builder {
+fun getNormalFloat(activity: Activity, layoutId: Int, invokeView: OnInvokeView? = null): EasyFloat.Builder {
     return EasyFloat.with(activity)
         // 设置浮窗xml布局文件，并可设置详细信息
         .setLayout(layoutId,invokeView)
@@ -21,7 +23,7 @@ public fun getNormalFloat(activity:Activity,layoutId: Int, invokeView: OnInvokeV
         // 设置吸附方式，共15种模式，详情参考SidePattern
         .setSidePattern(SidePattern.RESULT_HORIZONTAL)
         // 设置浮窗的标签，用于区分多个浮窗
-        .setTag("testFloat")
+        .setTag(TAG_FLOAT_GLOBAL)
         // 设置浮窗是否可拖拽，默认可拖拽
         .setDragEnable(true)
         // 系统浮窗是否包含EditText，仅针对系统浮窗，默认不包含
