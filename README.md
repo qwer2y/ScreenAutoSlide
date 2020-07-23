@@ -1,2 +1,4 @@
 # ScreenAutoSlide
-观看视频赚钱软件自动滑动屏幕
+利用无障碍服务/ADB Shell 自动滑动屏幕
+
+* 已搁置
